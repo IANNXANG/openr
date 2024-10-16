@@ -65,8 +65,8 @@ def main():
         max_roll_num = 20  #roll20次
         rollouts, corrs = getrollouts(root, max_roll_num)
         mcst = cal_mc_bs(root)
-        root.mc = mcst
-        print(root)
+        root.mc = mcst # 蒙特卡洛估计值
+        print(root) #[State] Q:{问题} || PA:{部分答案} || MC:{蒙特卡洛估计值} ||
         print("corrs = ", corrs, "max_roll_num =", max_roll_num)
 
         states.append(root)
