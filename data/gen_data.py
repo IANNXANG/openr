@@ -62,14 +62,16 @@ def main():
         # Call getrollout and handle the result
         states = []
         root = State(problem, "", final_answer)
-        max_roll_num = 20
+        max_roll_num = 20  #roll20次
         rollouts, corrs = getrollouts(root, max_roll_num)
         mcst = cal_mc_bs(root)
         root.mc = mcst
+        print(root)
+        print("corrs = ", corrs, "max_roll_num =", max_roll_num)
 
         states.append(root)
 
-        if sum(corrs) > 0 and sum(corrs) < max_roll_num: 
+        if sum(corrs) > 0 and sum(corrs) < max_roll_num:   #有对的但不全对
             print("Process annotation ...\n")
             filename = str(i+1) +'_states_list.json'
             process_annotation(problem, final_answer, states, filename)

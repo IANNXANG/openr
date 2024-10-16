@@ -10,6 +10,8 @@ class State:
 
     def __repr__(self):
         return f"[State] Q:{self.q} || PA:{self.pa} || MC:{self.mc} ||"
+    #[State] Q:{问题} || PA:{部分答案} || MC:{蒙特卡洛估计值} ||
+
     
     def add_rollout(self, result):
         self.rollouts.append(result)
