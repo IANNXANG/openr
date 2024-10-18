@@ -28,7 +28,7 @@ bad_token = '-'
 step_tag = '\n\n\n\n\n' #ки
 step_tag2 = '\n\n'
 
-model_path = "../../models/Qwen/Qwen2.5-Math-7B-Instruct/"
+model_path = "/home/jovyan/.cache/huggingface/hub/Qwen2.5-Math-7B-Instruct/"
 
 # tokenizer = AutoTokenizer.from_pretrained(model_path)
 
@@ -102,7 +102,7 @@ print(model)
 
 # model = get_peft_model(model, lora_config)
 
-adapter_path = './prm_results_qwen_new/bs_256_lr_0.0001/checkpoint-6898'
+adapter_path = '/pubshare/LLM/Math-psa/checkpoint-2127'
 adapter_config = PeftConfig.from_pretrained(adapter_path)
 
 # Wrap the pre-trained model with the LoRA fine-tuned weights

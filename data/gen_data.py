@@ -75,6 +75,7 @@ def main():
             print("Process annotation ...\n")
             filename = str(i+1) +'_states_list.json'
             process_annotation(problem, final_answer, states, filename)
+            #给了哪些信息？  Q and A，和Q and PA and MC
     
     # Log completion
     logging.info("Finished processing the JSON file.")
